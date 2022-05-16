@@ -9,7 +9,7 @@ function App() {
       <Box
         sx={{ display: 'flex' }}>
         <DrawerMenu />
-        <Navbar sx={{width:'calc(100% - 240px)'}}/>
+        <Navbar sx={{width:'calc(100% - 210px)'}}/>
       </Box>
 
 
