@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -6,15 +7,19 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
+import IconButton from '@mui/material/IconButton';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Options, AccountOptions } from './Options';
 import logo from '../../images/icon.png';
+import { DrawerContext } from '../../App';
 
-export const list = (anchor) => (
-    <Box
+
+export default function ListDesign() {
+    const { toggleDrawer } = useContext(DrawerContext);
+
+    return <Box
         sx={{ width: "220px" }}
         role="presentation"
-    //   onClick={toggleDrawer(anchor, false)}
-    //   onKeyDown={toggleDrawer(anchor, false)}
     >
         <List
             subheader={
@@ -28,6 +33,15 @@ export const list = (anchor) => (
                         verticalAlign: "middle",
                         marginRight: "15px"
                     }} /><span>Analyze</span>
+                    <IconButton
+                        size="large"
+                        aria-label=""
+                        onClick={() => toggleDrawer(false)}
+                        sx={{display :{xs: 'inline-block', md: 'none'}}}
+                    >
+                        <ChevronLeftIcon fontSize='large' />
+                    </IconButton>
+
                 </ListSubheader>
             }>
             {Options.map(({ label, icon }, index) => (
@@ -60,4 +74,4 @@ export const list = (anchor) => (
             ))}
         </List>
     </Box>
-);
+}

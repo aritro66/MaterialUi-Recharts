@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useContext} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,10 +16,12 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import { Search, SearchIconWrapper, StyledInputBase, StyleButton1, StyleButton2 } from './Option';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import { DrawerContext } from '../../App';
 
 
 
 export default function Navbar() {
+  const {show,toggleDrawer}=useContext(DrawerContext); 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -43,8 +45,8 @@ export default function Navbar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  
-  
+
+
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -62,7 +64,7 @@ export default function Navbar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      
+
       <MenuItem>
         <IconButton
           size="large"
@@ -75,7 +77,7 @@ export default function Navbar() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
-      
+
     </Menu>
   );
 
@@ -83,15 +85,19 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" elevation={1} sx={{ backgroundColor: "white" }}>
         <Toolbar>
-          {/* <IconButton
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, color: 'black' }}
+            onClick={()=>{toggleDrawer(!show)}}
           >
             <MenuIcon />
-          </IconButton> */}
+          </IconButton>
+          </Box>
+          
           <ButtonGroup variant="outlined" aria-label="outlined button group">
             <StyleButton1 variant="contained">EN</StyleButton1>
             <StyleButton2 variant='contained'>ID</StyleButton2>
@@ -130,7 +136,7 @@ export default function Navbar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              sx={{color:"black"}}
+              sx={{ color: "black" }}
             >
               <MoreIcon />
             </IconButton>

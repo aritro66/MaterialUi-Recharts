@@ -1,22 +1,22 @@
-import * as React from 'react';
+import React,{useContext} from 'react';
 import Drawer from '@mui/material/Drawer';
-import {list} from './List';
+import ListDesign from './List';
+import { DrawerContext } from '../../App';
 
-export default function DrawerMenu() {
-  
+export default function DrawerMenu({variant}) {
+  const {show} = useContext(DrawerContext);
+
   return (
-    // <div>
           <Drawer
-          variant='permanent'
+          variant={variant}
             anchor={'left'}
-            open={true}
+            open={(variant==="permanent")?true:show}
             sx={{
               minWidth:"220px"
             }}
             
           >
-            {list('left')}
+           <ListDesign /> 
           </Drawer>
-    // </div>
   );
 }
