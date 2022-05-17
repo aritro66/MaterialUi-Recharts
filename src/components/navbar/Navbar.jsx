@@ -91,7 +91,7 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, color: 'black' }}
+            sx={{ mr: 2, color: '#7d7d98' }}
             onClick={()=>{toggleDrawer(!show)}}
           >
             <MenuIcon />
@@ -102,7 +102,7 @@ export default function Navbar() {
             <StyleButton1 variant="contained">EN</StyleButton1>
             <StyleButton2 variant='contained'>ID</StyleButton2>
           </ButtonGroup>
-          <Typography variant="body1" component="span" sx={{ color: "black", marginLeft: "10px" }}>
+          <Typography variant="body1" component="span" sx={{ color: "#bdbece", marginLeft: "10px" }}>
             English
           </Typography>;
 
@@ -112,6 +112,7 @@ export default function Navbar() {
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
+              sx={{color:"#7d7d98"}}
             >
               <Badge variant="dot" color="error">
                 <NotificationsOutlinedIcon />
@@ -136,7 +137,7 @@ export default function Navbar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              sx={{ color: "black" }}
+              sx={{ color: "#7d7d98" }}
             >
               <MoreIcon />
             </IconButton>

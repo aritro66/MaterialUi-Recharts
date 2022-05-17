@@ -13,7 +13,7 @@ export default function BasicInfo() {
                 <Typography variant='h5' component="div" sx={{ fontWeight: "bold", color: "#383874" }}>
                     Hi, Albert Tristian
                 </Typography>
-                <Typography variant='h6' component="div" sx={{ fontSize: "13px", color: "#bdbece" }}>
+                <Typography variant='h6' component="div" sx={{ fontSize: "13px", color: "#a7a7c2" }}>
                     welcome back to analyze
                 </Typography>
             </Box>

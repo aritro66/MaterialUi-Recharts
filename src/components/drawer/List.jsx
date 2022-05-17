@@ -28,16 +28,16 @@ export default function ListDesign() {
         #8676ff`, fontWeight: 'bold', margin: "7px 0 30px 0px"
                 }}>
                     <img src={logo} alt="" style={{
-                        height: "30px",
-                        width: "30px",
+                        height: "27px",
+                        width: "27px",
                         verticalAlign: "middle",
-                        marginRight: "15px"
+                        marginRight: "10px"
                     }} /><span>Analyze</span>
                     <IconButton
                         size="large"
                         aria-label=""
                         onClick={() => toggleDrawer(false)}
-                        sx={{display :{xs: 'inline-block', md: 'none'}}}
+                        sx={{ display: { xs: 'inline-block', md: 'none' } }}
                     >
                         <ChevronLeftIcon fontSize='large' />
                     </IconButton>
@@ -47,10 +47,10 @@ export default function ListDesign() {
             {Options.map(({ label, icon }, index) => (
                 <ListItem key={index} disablePadding>
                     <ListItemButton>
-                        <ListItemIcon sx={{ minWidth: "35px" }}>
+                        <ListItemIcon sx={{ minWidth: "35px", color: "#a7a7c2" }}>
                             {icon}
                         </ListItemIcon>
-                        <ListItemText primary={label} />
+                        <ListItemText primary={label} sx={{ color: "#a7a7c2" }} />
                     </ListItemButton>
                 </ListItem>
             ))}
@@ -58,17 +58,17 @@ export default function ListDesign() {
         <Divider />
         <List
             subheader={
-                <ListSubheader component="div" sx={{ fontSize: 20 }}>
+                <ListSubheader component="div" sx={{ fontSize: 20, color: "#bcbdce" }}>
                     Accounts
                 </ListSubheader>
             }>
             {AccountOptions.map(({ label, icon }, index) => (
                 <ListItem key={index} disablePadding>
                     <ListItemButton>
-                        <ListItemIcon sx={{ minWidth: "35px" }}>
+                        <ListItemIcon sx={{ minWidth: "35px", color: "#a7a7c2" }}>
                             {icon}
                         </ListItemIcon>
-                        <ListItemText primary={label} />
+                        <ListItemText primary={label} sx={{ color: "#a7a7c2" }} />
                     </ListItemButton>
                 </ListItem>
             ))}

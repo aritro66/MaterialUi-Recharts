@@ -23,7 +23,7 @@ export const Search = styled('div')(({ theme }) => ({
 
 export const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  color: 'black',
+  color: '#7d7d98',
   height: '100%',
   position: 'absolute',
   pointerEvents: 'none',
@@ -33,7 +33,7 @@ export const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'black',
+  color: '#7d7d98',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -47,7 +47,8 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const StyleButton1 = styled(Button)(({ theme }) => ({
-  color: 'black',
+  color: '#383874',
+  fontWeight:'bold',
   backgroundColor: `#e8ecf2`,
   boxShadow: 'none',
   '&:hover': {
@@ -58,6 +59,7 @@ export const StyleButton1 = styled(Button)(({ theme }) => ({
 
 export const StyleButton2 = styled(Button)(({ theme }) => ({
   color: '#c5c6d4',
+  fontWeight:'bold',
   backgroundColor: `#f8f9fb`,
   boxShadow: 'none',
   '&:hover': {
