@@ -215,7 +215,7 @@ export const chartData1 = [
 ];
 
 export const chartData2 = [
-    { name: 'E-Commerce', value: 1618, color: '#21cc9e', st: 180, ed: 90,inr:50,otr:80 },
-    { name: 'Facebook', value: 808, color: '#8676ff', st: 90, ed: 45,inr:53,otr:77 },
-    { name: 'Instagram', value: 808, color: '#eff4f8', st: 45, ed: 0,inr:56,otr:74 },
+    { name: 'E-Commerce', value: 1618, color: '#21cc9e', st: 180, ed: 90,inr:55,otr:90 },
+    { name: 'Facebook', value: 808, color: '#8676ff', st: 90, ed: 45,inr:58,otr:87 },
+    { name: 'Instagram', value: 808, color: '#eff4f8', st: 45, ed: 0,inr:61,otr:84 },
 ];
