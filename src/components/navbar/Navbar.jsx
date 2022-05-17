@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React, { useContext } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,7 +19,7 @@ import { DrawerContext } from '../../App';
 
 
 export default function Navbar() {
-  const {show,toggleDrawer}=useContext(DrawerContext); 
+  const { show, toggleDrawer } = useContext(DrawerContext);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -71,17 +71,17 @@ export default function Navbar() {
         <Toolbar>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2, color: '#7d7d98' }}
-            onClick={()=>{toggleDrawer(!show)}}
-          >
-            <MenuIcon />
-          </IconButton>
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2, color: '#7d7d98' }}
+              onClick={() => { toggleDrawer(!show) }}
+            >
+              <MenuIcon />
+            </IconButton>
           </Box>
-          
+
           <ButtonGroup variant="outlined" aria-label="outlined button group">
             <StyleButton1 variant="contained">EN</StyleButton1>
             <StyleButton2 variant='contained'>ID</StyleButton2>
@@ -96,7 +96,7 @@ export default function Navbar() {
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
-              sx={{color:"#7d7d98"}}
+              sx={{ color: "#7d7d98" }}
             >
               <Badge variant="dot" color="error">
                 <NotificationsOutlinedIcon />

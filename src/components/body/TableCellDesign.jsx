@@ -75,8 +75,8 @@ export const TableCellStyle5 = ({ data }) => {
 export const TableCellStyle6 = ({ first, second, img }) => {
     return (
         <TableCell>
-            <Box sx={{ display: "flex",alignItems:'center' }}>
-                <img src={img} alt="" style={{ height: "40px", width: "40px", marginRight:"12px" }} />
+            <Box sx={{ display: "flex", alignItems: 'center' }}>
+                <img src={img} alt="" style={{ height: "40px", width: "40px", marginRight: "12px" }} />
                 <Box>
                     <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "15px" }}>
                         {first}

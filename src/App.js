@@ -17,12 +17,12 @@ function App() {
   }
 
   return (
-    <DrawerContext.Provider value={{show,toggleDrawer}}>
+    <DrawerContext.Provider value={{ show, toggleDrawer }}>
       <Box
         sx={{ display: { xs: 'none', md: 'flex' } }}>
         <DrawerMenu variant="permanent" />
         <Stack spacing={2} sx={{ width: 'calc(100% - 210px)' }}>
-          <Navbar  />
+          <Navbar />
           <Body />
         </Stack>
       </Box>
@@ -30,7 +30,7 @@ function App() {
         sx={{ display: { xs: 'flex', md: 'none' } }}>
         <DrawerMenu variant="temporary" />
         <Stack spacing={2} sx={{ width: '100%' }}>
-          <Navbar  />
+          <Navbar />
           <Body />
         </Stack>
       </Box>

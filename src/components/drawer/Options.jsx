@@ -3,8 +3,8 @@ import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
-import {BiCube,BiBox} from 'react-icons/bi';
-import {FiPenTool,FiPackage,FiMessageCircle} from 'react-icons/fi'
+import { BiCube, BiBox } from 'react-icons/bi';
+import { FiPenTool, FiPackage, FiMessageCircle } from 'react-icons/fi'
 
 export const Options = [
     {
@@ -21,11 +21,13 @@ export const Options = [
     },
     {
         label: "Messages",
-        icon: <FiMessageCircle size={23}/>
+        icon: <FiMessageCircle size={23} />,
+        no: 4
     },
     {
         label: "Order Lists",
-        icon: <FiPackage size={23} />
+        icon: <FiPackage size={23} />,
+        no: 2
     },
     {
         label: "Product Stock",
@@ -36,11 +38,12 @@ export const Options = [
 export const AccountOptions = [
     {
         label: "Settings",
-        icon: <SettingsOutlinedIcon />
+        icon: <SettingsOutlinedIcon />,
+        no: 2
     },
     {
         label: "Themes",
-        icon: <FiPenTool size={23}/>
+        icon: <FiPenTool size={23} />
     },
     {
         label: "Helps",

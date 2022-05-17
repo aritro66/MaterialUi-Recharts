@@ -8,7 +8,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 export default function ChartsDesign() {
 
     return (
-        <Box>
+        <Box sx={{marginBottom:"20px"}}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={7} lg={8}>
                     <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px" }}>
@@ -41,7 +41,7 @@ export default function ChartsDesign() {
                 </Grid>
 
                 <Grid item xs={12} md={5} lg={4}>
-                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px", position:"relative" }}>
+                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px", position: "relative" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
                                 Social Source
@@ -70,7 +70,7 @@ export default function ChartsDesign() {
                                 ))}
                             </PieChart>
                         </ResponsiveContainer>
-                        <Box sx={{ position: "absolute",left:"50%",top:"140px",transform:"translateX(-50%)",display:"flex",flexDirection:"column",alignItems:"center" }}>
+                        <Box sx={{ position: "absolute", left: "50%", top: "140px", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center" }}>
                             <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "12px" }}>
                                 TOTAL SALES
                             </Typography>
@@ -78,7 +78,7 @@ export default function ChartsDesign() {
                                 3,234
                             </Typography>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "10px", fontWeight: 'bold' }}>
-                                <img src={logo} style={{height:"10px",width:"10px"}}/> Products
+                                <img src={logo} alt="" style={{ height: "10px", width: "10px" }} /> Products
                             </Typography>
                         </Box>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", marginTop: "40px" }}>

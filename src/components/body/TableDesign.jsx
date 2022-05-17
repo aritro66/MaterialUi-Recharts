@@ -20,13 +20,13 @@ export default function TableDesign() {
                 <Table sx={{ minWidth: 650 }} stickyHeader aria-label="">
                     <TableHead>
                         <TableRow>
-                            <TableCell sx={{ minWidth: "250px", color:"#a7a7c2" }}>PRODUCT</TableCell>
-                            <TableCell sx={{ minWidth: "210px", color:"#a7a7c2" }}>ORDER DATE</TableCell>
-                            <TableCell sx={{ minWidth: "100px", color:"#a7a7c2" }}>STATUS</TableCell>
-                            <TableCell sx={{ minWidth: "230px", color:"#a7a7c2" }}>CUSTOMER</TableCell>
-                            <TableCell sx={{ minWidth: "150px", color:"#a7a7c2" }}>PRICE PER UNIT</TableCell>
-                            <TableCell sx={{ minWidth: "100px", color:"#a7a7c2" }}>QUANTITY</TableCell>
-                            <TableCell sx={{ minWidth: "150px", color:"#a7a7c2" }}>TOTAL PRICE</TableCell>
+                            <TableCell sx={{ minWidth: "250px", color: "#a7a7c2" }}>PRODUCT</TableCell>
+                            <TableCell sx={{ minWidth: "210px", color: "#a7a7c2" }}>ORDER DATE</TableCell>
+                            <TableCell sx={{ minWidth: "100px", color: "#a7a7c2" }}>STATUS</TableCell>
+                            <TableCell sx={{ minWidth: "230px", color: "#a7a7c2" }}>CUSTOMER</TableCell>
+                            <TableCell sx={{ minWidth: "150px", color: "#a7a7c2" }}>PRICE PER UNIT</TableCell>
+                            <TableCell sx={{ minWidth: "100px", color: "#a7a7c2" }}>QUANTITY</TableCell>
+                            <TableCell sx={{ minWidth: "150px", color: "#a7a7c2" }}>TOTAL PRICE</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

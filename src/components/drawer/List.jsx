@@ -9,6 +9,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
 import { Options, AccountOptions } from './Options';
 import logo from '../../images/icon.png';
 import { DrawerContext } from '../../App';
@@ -44,13 +46,18 @@ export default function ListDesign() {
 
                 </ListSubheader>
             }>
-            {Options.map(({ label, icon }, index) => (
+            {Options.map(({ label, icon, no }, index) => (
                 <ListItem key={index} disablePadding>
                     <ListItemButton>
                         <ListItemIcon sx={{ minWidth: "35px", color: "#a7a7c2" }}>
                             {icon}
                         </ListItemIcon>
-                        <ListItemText primary={label} sx={{ color: "#a7a7c2" }} />
+                        <ListItemText primary={<Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <Typography>{label}</Typography>
+                            {
+                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: "#ff708b", color: "#fff" }} /> : ""
+                            }
+                        </Box>} sx={{ color: "#a7a7c2" }} />
                     </ListItemButton>
                 </ListItem>
             ))}
@@ -62,13 +69,18 @@ export default function ListDesign() {
                     Accounts
                 </ListSubheader>
             }>
-            {AccountOptions.map(({ label, icon }, index) => (
+            {AccountOptions.map(({ label, icon, no }, index) => (
                 <ListItem key={index} disablePadding>
                     <ListItemButton>
                         <ListItemIcon sx={{ minWidth: "35px", color: "#a7a7c2" }}>
                             {icon}
                         </ListItemIcon>
-                        <ListItemText primary={label} sx={{ color: "#a7a7c2" }} />
+                        <ListItemText primary={<Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <Typography>{label}</Typography>
+                            {
+                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: "#ff708b", color: "#fff" }} /> : ""
+                            }
+                        </Box>} sx={{ color: "#a7a7c2" }} />
                     </ListItemButton>
                 </ListItem>
             ))}

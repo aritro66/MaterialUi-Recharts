@@ -48,7 +48,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export const StyleButton1 = styled(Button)(({ theme }) => ({
   color: '#383874',
-  fontWeight:'bold',
+  fontWeight: 'bold',
   backgroundColor: `#e8ecf2`,
   boxShadow: 'none',
   '&:hover': {
@@ -59,7 +59,7 @@ export const StyleButton1 = styled(Button)(({ theme }) => ({
 
 export const StyleButton2 = styled(Button)(({ theme }) => ({
   color: '#c5c6d4',
-  fontWeight:'bold',
+  fontWeight: 'bold',
   backgroundColor: `#f8f9fb`,
   boxShadow: 'none',
   '&:hover': {
