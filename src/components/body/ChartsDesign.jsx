@@ -1,19 +1,20 @@
 import React from 'react'
-import { Box, Grid, Typography, InputLabel, Select, MenuItem, FormControl, IconButton } from '@mui/material';
+import { Box, Grid, Typography, InputLabel, Select, MenuItem, FormControl, IconButton, useTheme, ImageListItem } from '@mui/material';
 import logo from "../../images/product.png";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Pie, PieChart, Cell } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Pie, PieChart, Cell } from 'recharts';
 import { chartData1, chartData2 } from './DummyData';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 export default function ChartsDesign() {
+    const theme = useTheme();
 
     return (
-        <Box sx={{marginBottom:"20px"}}>
+        <Box sx={{ marginBottom: "30px" }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={7} lg={8}>
-                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px" }}>
+                    <Box sx={{ border: `1px solid ${theme.color4}`, borderRadius: "5px", padding: "10px 15px" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "18px", fontWeight: 'bold' }}>
                                 Sales Analytics
                             </Typography>
                             <FormControl sx={{ width: "200px", fontSize: "15px" }}>
@@ -23,30 +24,30 @@ export default function ChartsDesign() {
                                     id="demo-simple-select"
                                     label="time"
                                 >
-                                    <MenuItem value={10} selected>Period: <Typography variant='body1' component='span' sx={{ color: "#383874", fontWeight: "bold" }}> This Week</Typography></MenuItem>
-                                    <MenuItem value={20}>Period: <Typography variant='body1' component='span' sx={{ color: "#383874", fontWeight: "bold" }}> This Month</Typography></MenuItem>
+                                    <MenuItem value={10} selected>Period: <Typography variant='body1' component='span' sx={{ color: theme.color1, fontWeight: "bold" }}> This Week</Typography></MenuItem>
+                                    <MenuItem value={20}>Period: <Typography variant='body1' component='span' sx={{ color: theme.color1, fontWeight: "bold" }}> This Month</Typography></MenuItem>
                                 </Select>
                             </FormControl>
                         </Box>
-                        <ResponsiveContainer width="100%" height={400}>
-                            <LineChart data={chartData1} >
+                        <ResponsiveContainer width="100%" height={254}>
+                            <AreaChart data={chartData1} >
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" />
-                                <YAxis dataKey="pv" unit="K" tickFormatter={num => `$${num}`} />
+                                <XAxis dataKey="name" tickLine={false} axisLine={{ stroke: '#bbbbbb' }} tick={{ fill: '#b0b0b0' }} />
+                                <YAxis dataKey="pv" unit="K" tickFormatter={num => `$${num}`} width={30} tickLine={false} axisLine={{ stroke: '#bbbbbb' }} tick={{ fill: '#b0b0b0' }} />
                                 <Tooltip content={<CustomTooltip />} />
-                                <Line type="monotone" dataKey="pv" stroke="#8676ff" strokeWidth={3} />
-                            </LineChart>
+                                <Area type="monotone" dataKey="pv" stroke={theme.color3} fill="#F8F6FF" strokeWidth={3} dot={false} />
+                            </AreaChart>
                         </ResponsiveContainer>
                     </Box>
                 </Grid>
 
                 <Grid item xs={12} md={5} lg={4}>
-                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px", position: "relative" }}>
+                    <Box sx={{ border: `1px solid ${theme.color4}`, borderRadius: "5px", padding: "10px 15px", position: "relative" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "18px", fontWeight: 'bold' }}>
                                 Social Source
                             </Typography>
-                            <IconButton sx={{ color: "#a7a7c2" }}>
+                            <IconButton sx={{ color: theme.color2 }}>
                                 <MoreHorizIcon />
                             </IconButton>
 
@@ -71,38 +72,41 @@ export default function ChartsDesign() {
                             </PieChart>
                         </ResponsiveContainer>
                         <Box sx={{ position: "absolute", left: "50%", top: "140px", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center" }}>
-                            <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "12px" }}>
+                            <Typography variant='h6' component='h6' sx={{ color: theme.color2, fontSize: "12px" }}>
                                 TOTAL SALES
                             </Typography>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "25px", fontWeight: 'bold' }}>
                                 3,234
                             </Typography>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "10px", fontWeight: 'bold' }}>
-                                <img src={logo} alt="" style={{ height: "10px", width: "10px" }} /> Products
+                            <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "12px", fontWeight: 'bold' }}>
+                                <ImageListItem sx={{ height: "12px", width: "12px" }}>
+                                    <img src={logo} alt="" />
+                                </ImageListItem>
+                                 Products
                             </Typography>
                         </Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", marginTop: "40px" }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px", marginTop: "60px" }}>
                             <Box sx={{ borderTop: "5px solid #21cc9e", padding: "10px 0" }} >
-                                <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "15px" }}>
+                                <Typography variant='h6' component='h6' sx={{ color: theme.color2, fontSize: "15px" }}>
                                     E-Commerce
                                 </Typography>
-                                <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
+                                <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "23px", fontWeight: 'bold' }}>
                                     1,618
                                 </Typography>
                             </Box>
                             <Box sx={{ borderTop: "5px solid #8676ff", padding: "10px 0" }} >
-                                <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "15px" }}>
+                                <Typography variant='h6' component='h6' sx={{ color: theme.color2, fontSize: "15px" }}>
                                     Facebook
                                 </Typography>
-                                <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
+                                <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "23px", fontWeight: 'bold' }}>
                                     808
                                 </Typography>
                             </Box>
                             <Box sx={{ borderTop: "5px solid #eff4f8", padding: "10px 0" }} >
-                                <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "15px" }}>
+                                <Typography variant='h6' component='h6' sx={{ color: theme.color2, fontSize: "15px" }}>
                                     Instagram
                                 </Typography>
-                                <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
+                                <Typography variant='h5' component='h4' sx={{ color: theme.color1, fontSize: "23px", fontWeight: 'bold' }}>
                                     808
                                 </Typography>
                             </Box>
@@ -116,11 +120,12 @@ export default function ChartsDesign() {
 }
 
 function CustomTooltip({ active, payload }) {
+    const theme = useTheme();
     if (active) {
         return (
-            <div style={{ padding: "8px", color: "#383874", backgroundColor: "white", border: "1px solid #e4e4e4" }}>
+            <Box sx={{ padding: "8px", color: theme.color1, backgroundColor: theme.color9, border: `1px solid ${theme.color4}` }}>
                 {`$${payload[0].value * 1000}`}
-            </div>
+            </Box>
         );
     }
     return null;
