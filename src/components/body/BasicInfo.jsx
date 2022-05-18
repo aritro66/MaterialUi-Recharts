@@ -49,8 +49,8 @@ export default function BasicInfo() {
                             </Box>
                         </Box>
                         <Divider />
-                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px" }}>
-                            <Typography variant='h6' component='h6' sx={{ color: theme.color3, fontSize: "15px" }}>
+                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px", color: theme.color3, fontSize: "12px", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", '&:hover': { backgroundColor: theme.color3, color: theme.color9 } }}>
+                            <Typography variant='h6' component='h6'>
                                 See Detail
                             </Typography>
                             <IconButton>
@@ -82,8 +82,8 @@ export default function BasicInfo() {
                             </Box>
                         </Box>
                         <Divider />
-                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px" }}>
-                            <Typography variant='h6' component='h6' sx={{ color: theme.color3, fontSize: "15px" }}>
+                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px", color: theme.color3, fontSize: "12px", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", '&:hover': { backgroundColor: theme.color3, color: theme.color9 } }}>
+                            <Typography variant='h6' component='h6'>
                                 See Detail
                             </Typography>
                             <IconButton>
@@ -114,8 +114,8 @@ export default function BasicInfo() {
                             </Box>
                         </Box>
                         <Divider />
-                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px", backgroundColor: theme.color3, borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px" }}>
-                            <Typography variant='h6' component='h6' sx={{ color: theme.color9, fontSize: "15px" }}>
+                        <Box sx={{ display: 'flex', justifyContent: "space-between", alignItems: 'center', padding: "5px 15px", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", color: theme.color3, fontSize: "12px", '&:hover': { backgroundColor: theme.color3, color: theme.color9 } }}>
+                            <Typography variant='h6' component='h6'>
                                 See Detail
                             </Typography>
                             <IconButton sx={{ color: theme.color9 }}>
