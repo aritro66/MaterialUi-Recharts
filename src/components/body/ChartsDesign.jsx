@@ -32,10 +32,10 @@ export default function ChartsDesign() {
                         <ResponsiveContainer width="100%" height={254}>
                             <AreaChart data={chartData1} >
                                 <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" tickLine={false} axisLine={{ stroke: '#bbbbbb' }} tick={{ fill: '#b0b0b0' }} />
-                                <YAxis dataKey="pv" unit="K" tickFormatter={num => `$${num}`} width={30} tickLine={false} axisLine={{ stroke: '#bbbbbb' }} tick={{ fill: '#b0b0b0' }} />
+                                <XAxis dataKey="name" tickLine={false} axisLine={{ stroke: theme.color15 }} tick={{ fill: theme.color16 }} />
+                                <YAxis dataKey="pv" unit="K" tickFormatter={num => `$${num}`} width={30} axisLine={{ stroke: theme.color15 }} tick={{ fill: theme.color16 }} />
                                 <Tooltip content={<CustomTooltip />} />
-                                <Area type="monotone" dataKey="pv" stroke={theme.color3} fill="#F8F6FF" strokeWidth={3} dot={false} />
+                                <Area type="monotone" dataKey="pv" stroke={theme.color3} fill={theme.color17} strokeWidth={3} dot={false} />
                             </AreaChart>
                         </ResponsiveContainer>
                     </Box>
@@ -82,7 +82,7 @@ export default function ChartsDesign() {
                                 <ImageListItem sx={{ height: "12px", width: "12px" }}>
                                     <img src={logo} alt="" />
                                 </ImageListItem>
-                                 Products
+                                Products
                             </Typography>
                         </Box>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px", marginTop: "60px" }}>

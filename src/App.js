@@ -20,7 +20,11 @@ const theme = createTheme({
   color10: "#21cc9e",
   color11: "#d3f5ec",
   color12: "#ffc962",
-  color13: "#fff3da"
+  color13: "#fff3da",
+  color14: "#44b700",
+  color15: "#bbbbbb",
+  color16: "#b0b0b0",
+  color17: "#F8F6FF"
 });
 
 export const DrawerContext = createContext();
