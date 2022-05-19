@@ -58,7 +58,7 @@ export default function ListDesign() {
                         <ListItemText primary={<Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <Typography>{label}</Typography>
                             {
-                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: theme.color6, color: theme.color9 }} /> : ""
+                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: theme.color6, color: theme.color9, borderRadius: "5px" }} /> : ""
                             }
                         </Box>} sx={{ color: theme.color2 }} />
                     </ListItemButton>
@@ -81,7 +81,7 @@ export default function ListDesign() {
                         <ListItemText primary={<Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                             <Typography>{label}</Typography>
                             {
-                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: theme.color6, color: theme.color9 }} /> : ""
+                                no !== undefined ? <Chip label={no} size="small" sx={{ backgroundColor: theme.color6, color: theme.color9, borderRadius: "5px" }} /> : ""
                             }
                         </Box>} sx={{ color: theme.color2 }} />
                     </ListItemButton>
